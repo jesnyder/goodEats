@@ -55,6 +55,11 @@
     ul, ol { padding-left: 22px; }
     li { margin: 6px 0; }
     strong { color: #3b2a1a; }
+    th.sortable { cursor: pointer; user-select: none; }
+    th.sortable:hover { background-color: #e8dcc8; }
+    th.sortable::after { content: ' ⇅'; font-size: 0.75em; color: #9b8068; }
+    th.sort-asc::after { content: ' ↑'; color: #5a3e2b; }
+    th.sort-desc::after { content: ' ↓'; color: #5a3e2b; }
     .tip {
       background: #eaf4ea;
       border-left: 4px solid #6aaa64;
@@ -90,7 +95,7 @@
   <p>Combine these elements:</p>
   <table>
     <thead>
-      <tr><th>Role</th><th>Examples</th></tr>
+      <tr><th class="sortable">Role</th><th class="sortable">Examples</th></tr>
     </thead>
     <tbody>
       <tr><td>Salt / umami</td><td>Soy sauce, tamari, miso, liquid aminos</td></tr>
@@ -136,7 +141,7 @@
   <p>Values per 100g of firm tofu. Freezing and pressing removes water, concentrating nutrients — especially protein.</p>
   <table>
     <thead>
-      <tr><th>Nutrient</th><th>Raw / Pressed</th><th>After Freeze + Press</th></tr>
+      <tr><th class="sortable">Nutrient</th><th class="sortable">Raw / Pressed</th><th class="sortable">After Freeze + Press</th></tr>
     </thead>
     <tbody>
       <tr><td>Calories</td><td>76 kcal</td><td>~105 kcal</td></tr>
@@ -152,5 +157,25 @@
     Tofu is a <strong>complete protein</strong>, containing all nine essential amino acids. Extra-firm tofu has the highest protein content of all tofu varieties. The freeze-then-thaw method is recommended to maximize protein density per serving.
   </div>
 
+  <script>
+    document.querySelectorAll('th.sortable').forEach(th => {
+      th.addEventListener('click', () => {
+        const table = th.closest('table');
+        const tbody = table.querySelector('tbody');
+        const col = th.cellIndex;
+        const asc = !th.classList.contains('sort-asc');
+        table.querySelectorAll('th').forEach(h => h.className = h.classList.contains('sortable') ? 'sortable' : '');
+        th.className = 'sortable ' + (asc ? 'sort-asc' : 'sort-desc');
+        Array.from(tbody.querySelectorAll('tr')).sort((a, b) => {
+          const av = a.cells[col] ? a.cells[col].textContent.trim() : '';
+          const bv = b.cells[col] ? b.cells[col].textContent.trim() : '';
+          const an = parseFloat(av.replace(/[^\d.]/g, ''));
+          const bn = parseFloat(bv.replace(/[^\d.]/g, ''));
+          if (!isNaN(an) && !isNaN(bn)) return asc ? an - bn : bn - an;
+          return asc ? av.localeCompare(bv) : bv.localeCompare(av);
+        }).forEach(r => tbody.appendChild(r));
+      });
+    });
+  </script>
 </body>
 </html>

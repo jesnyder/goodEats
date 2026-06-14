@@ -14,6 +14,7 @@ goodEats/
 │   ├── marinating-tofu.html         # Tofu prep, marinade, cooking, nutrition
 │   ├── marinating-paneer.html       # Paneer marinade options (incl. Labneh & Miso), cooking methods, nutrition
 │   ├── preparing-beets.html         # Beet prep: boiled, steamed, roasted, grilled, pressure cooked, raw — with nutritional tradeoffs table
+│   ├── morning-smoothie.html        # Daily 1L smoothie — ingredients, method, per-ingredient nutrition, notes on functional ingredients
 │   └── ingredients.html             # Pantry reference table — all ingredients with nutritional info, culinary role, stock status; filterable and sortable
 ├── recipes/
 │   ├── marinating-tofu.md           # Markdown source for tofu page

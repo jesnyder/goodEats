@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morning Smoothie — GoodEats</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #2c2c2c;
+      background: #faf9f6;
+      line-height: 1.7;
+    }
+    nav { margin-bottom: 2rem; font-size: 0.9rem; }
+    nav a { color: #5a3e2b; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    h1 {
+      font-size: 2rem;
+      border-bottom: 2px solid #c8a96e;
+      padding-bottom: 12px;
+      color: #1a1a1a;
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #5a3e2b;
+      margin-top: 2rem;
+    }
+    h3 {
+      font-size: 1.05rem;
+      color: #3b2a1a;
+      margin-top: 1.5rem;
+      margin-bottom: 0.3rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 9px 12px;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f0e8d8;
+      font-weight: bold;
+    }
+    tr:hover { background-color: #faf3e8; }
+    .recipe-box {
+      background: #f0e8d8;
+      border-left: 4px solid #c8a96e;
+      padding: 16px 20px;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    .recipe-box ol, .recipe-box ul { margin: 8px 0 0; padding-left: 20px; }
+    .recipe-box li { margin: 6px 0; }
+    ul, ol { padding-left: 22px; }
+    li { margin: 6px 0; }
+    strong { color: #3b2a1a; }
+    th.sortable { cursor: pointer; user-select: none; }
+    th.sortable:hover { background-color: #e8dcc8; }
+    th.sortable::after { content: ' ⇅'; font-size: 0.75em; color: #9b8068; }
+    th.sort-asc::after { content: ' ↑'; color: #5a3e2b; }
+    th.sort-desc::after { content: ' ↓'; color: #5a3e2b; }
+    .tip {
+      background: #eaf4ea;
+      border-left: 4px solid #6aaa64;
+      padding: 12px 16px;
+      border-radius: 4px;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .nutrition-box {
+      background: #f0f4f8;
+      border-left: 4px solid #5b8db8;
+      padding: 16px 20px;
+      border-radius: 4px;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .warning-box {
+      background: #fdf6ec;
+      border-left: 4px solid #e0a840;
+      padding: 12px 16px;
+      border-radius: 4px;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .uncertain { color: #7a6040; font-style: italic; }
+    tfoot td { font-weight: bold; background: #f0e8d8; }
+    .note { font-size: 0.85rem; color: #6b5744; margin-top: 0.5rem; }
+  </style>
+</head>
+<body>
+
+  <nav><a href="index.html">← Back to GoodEats</a></nav>
+
+  <h1>Morning Smoothie</h1>
+  <p>A nutrient-dense, ~1-liter daily smoothie combining fermented dairy, omega-3 fats, adaptogens, and functional mushrooms. Makes one large serving.</p>
+
+  <div class="warning-box">
+    <strong>Night-before prep required:</strong> Soak chia seeds in water overnight. Use ½ cup water for every 2 tablespoons of dry chia seeds — they will gel and roughly triple in volume.
+  </div>
+
+  <h2>Ingredients</h2>
+  <div class="recipe-box">
+    <ul>
+      <li>1 medium banana (~118g)</li>
+      <li>1 stalk celery (~40g)</li>
+      <li>2 tbsp chia seeds, soaked overnight (~24g dry, yields ~½ cup gel)</li>
+      <li>1 tbsp flaxseed oil (add after blending — see note)</li>
+      <li>1 tsp fresh ginger, grated (~5g)</li>
+      <li>1 tsp green tea powder / matcha (~2g)</li>
+      <li>¼ cup kefir (~60ml)</li>
+      <li>1 tsp maca powder (~3g)</li>
+      <li>1 tsp lion's mane mushroom powder (~2g)</li>
+      <li>½ cup soy milk (~120ml)</li>
+      <li>1 tsp spirulina (~3g)</li>
+      <li>Water to bring total volume to 1 liter</li>
+    </ul>
+  </div>
+
+  <h2>Method</h2>
+  <div class="recipe-box">
+    <ol>
+      <li><strong>Night before:</strong> Combine 2 tbsp dry chia seeds with ½ cup water. Stir well, cover, and refrigerate overnight. The seeds will absorb the water and form a gel.</li>
+      <li><strong>Morning:</strong> Add banana, celery, soaked chia gel, ginger, matcha, kefir, maca, lion's mane, soy milk, and spirulina to a blender.</li>
+      <li>Blend on high until smooth, about 60 seconds.</li>
+      <li>Add water incrementally and blend briefly to reach ~1 liter total volume.</li>
+      <li><strong>Add flaxseed oil last</strong>, after blending, and stir or pulse briefly. Sustained high-speed blending can oxidize the ALA fatty acids in flax oil, reducing their nutritional value. Cold addition preserves them.</li>
+      <li>Drink immediately or refrigerate for up to 6 hours. Shake or stir before drinking if it has been sitting.</li>
+    </ol>
+  </div>
+
+  <div class="tip">
+    Spirulina and matcha both have strong flavors. The banana provides sweetness that balances them. If the flavor is too intense, increase banana to 1.5 or add a small amount of frozen mango.
+  </div>
+
+  <h2>Nutritional Breakdown</h2>
+  <p>Per full 1-liter serving. Values are approximate; actual amounts vary by brand and ripeness.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="sortable">Ingredient</th>
+        <th class="sortable">Amount</th>
+        <th class="sortable">Cal</th>
+        <th class="sortable">Protein</th>
+        <th class="sortable">Fat</th>
+        <th class="sortable">Carbs</th>
+        <th class="sortable">Key nutrients</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Banana</td>
+        <td>1 medium (118g)</td>
+        <td>105</td>
+        <td>1.3g</td>
+        <td>0.4g</td>
+        <td>27g</td>
+        <td>Potassium (12% DV), B6 (24% DV), vitamin C</td>
+      </tr>
+      <tr>
+        <td>Celery</td>
+        <td>1 stalk (40g)</td>
+        <td>6</td>
+        <td>0.3g</td>
+        <td>0g</td>
+        <td>1.2g</td>
+        <td>Vitamin K, folate</td>
+      </tr>
+      <tr>
+        <td>Chia seeds (dry)</td>
+        <td>2 tbsp (24g)</td>
+        <td>116</td>
+        <td>4g</td>
+        <td>7.5g</td>
+        <td>10g</td>
+        <td>Fiber (8g), ALA omega-3 (~4g), calcium (18% DV), phosphorus</td>
+      </tr>
+      <tr>
+        <td>Flaxseed oil</td>
+        <td>1 tbsp (14g)</td>
+        <td>124</td>
+        <td>0g</td>
+        <td>14g</td>
+        <td>0g</td>
+        <td>ALA omega-3 (~7g — highest plant source)</td>
+      </tr>
+      <tr>
+        <td>Ginger, fresh</td>
+        <td>1 tsp (5g)</td>
+        <td>4</td>
+        <td>0.1g</td>
+        <td>0g</td>
+        <td>1g</td>
+        <td>Gingerols (anti-inflammatory)</td>
+      </tr>
+      <tr>
+        <td>Green tea powder (matcha)</td>
+        <td>1 tsp (2g)</td>
+        <td>5</td>
+        <td>0.5g</td>
+        <td>0g</td>
+        <td>1g</td>
+        <td>L-theanine (~19mg), EGCG catechins, caffeine (~35mg)</td>
+      </tr>
+      <tr>
+        <td>Kefir</td>
+        <td>¼ cup (60ml)</td>
+        <td>36</td>
+        <td>2g</td>
+        <td>1.8g</td>
+        <td>2.8g</td>
+        <td>Probiotics (30+ strains), B12, calcium, phosphorus</td>
+      </tr>
+      <tr>
+        <td>Maca powder</td>
+        <td>1 tsp (3g)</td>
+        <td>10</td>
+        <td>0.4g</td>
+        <td>0g</td>
+        <td>2g</td>
+        <td>Vitamin C, iron, potassium, glucosinolates</td>
+      </tr>
+      <tr>
+        <td>Lion's mane powder</td>
+        <td>1 tsp (2g)</td>
+        <td>6</td>
+        <td>0.4g</td>
+        <td>0g</td>
+        <td>1g</td>
+        <td>Beta-glucans, hericenones/erinacines</td>
+      </tr>
+      <tr>
+        <td>Soy milk</td>
+        <td>½ cup (120ml)</td>
+        <td>65</td>
+        <td>4g</td>
+        <td>1.8g</td>
+        <td>7.7g</td>
+        <td>Calcium (fortified, ~150mg), vitamin D (fortified), isoflavones</td>
+      </tr>
+      <tr>
+        <td>Spirulina</td>
+        <td>1 tsp (3g)</td>
+        <td>9</td>
+        <td>1.7g</td>
+        <td>0.1g</td>
+        <td>0.8g</td>
+        <td>Phycocyanin (antioxidant), iron, beta-carotene</td>
+      </tr>
+      <tr>
+        <td>Water</td>
+        <td>to 1L</td>
+        <td>0</td>
+        <td>0g</td>
+        <td>0g</td>
+        <td>0g</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td>~1 liter</td>
+        <td><strong>~486 kcal</strong></td>
+        <td><strong>~14.7g</strong></td>
+        <td><strong>~25.6g</strong></td>
+        <td><strong>~54.5g</strong></td>
+        <td>Fiber: ~12g</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div class="nutrition-box">
+    <strong>Fat profile:</strong> Of the ~25g total fat, ~11g is ALA omega-3 (from chia and flaxseed oil combined). ALA is the plant precursor to EPA and DHA. Conversion efficiency in the body is low (~5–15% to EPA, ~0.5–5% to DHA), so ALA is not equivalent to marine omega-3s — but it still contributes to overall omega-3 status and has independent benefits. This smoothie is one of the richest plant-based ALA sources achievable in a single serving.
+  </div>
+
+  <h2>Notes on Functional Ingredients</h2>
+  <p>Several ingredients in this smoothie are chosen for effects beyond basic nutrition. The quality of evidence varies — noted honestly below.</p>
+
+  <h3>Matcha / Green tea powder</h3>
+  <p><strong>Well established.</strong> L-theanine (~19mg/tsp) and caffeine (~35mg/tsp) act synergistically — L-theanine moderates caffeine's stimulant effect, producing calm alertness without the spike-and-crash associated with coffee. EGCG (epigallocatechin gallate) is one of the most studied antioxidant compounds in food. Effects on mood, focus, and metabolic rate are consistently supported across multiple well-designed human studies.</p>
+
+  <h3>Spirulina</h3>
+  <p><strong>Well established for nutrient density.</strong> Among the highest protein concentrations per gram of any food (~60–70% protein by dry weight, complete amino acid profile). Good source of iron, B vitamins, and phycocyanin. <strong>Note on B12:</strong> Spirulina is sometimes marketed as a B12 source for vegans — this is misleading. It contains pseudovitamin B12 analogs that are not bioavailable and may actually compete with true B12 absorption. Do not rely on spirulina for B12.</p>
+
+  <h3>Flaxseed oil</h3>
+  <p><strong>Well established.</strong> The richest known plant source of ALA omega-3 (~53% of fat by weight). Refrigerate after opening and use within 6–8 weeks — flax oil oxidizes quickly at room temperature. As noted above, do not blend at high speed; add cold after blending to preserve ALA integrity.</p>
+
+  <h3>Chia seeds</h3>
+  <p><strong>Well established.</strong> Soaking overnight is functional, not cosmetic: dry chia seeds pass through the gut largely intact; the gel matrix formed during soaking makes the nutrients bioavailable and slows gastric emptying, which flattens the blood sugar response from the banana and soy milk carbohydrates.</p>
+
+  <h3>Maca powder</h3>
+  <p><strong>Emerging / limited evidence.</strong> A root from the Peruvian Andes, classified as an adaptogen. Nutritionally provides some vitamin C, iron, and potassium at 1 tsp serving. Human studies suggest possible benefits for energy, mood, and hormonal balance — but most are small, short-duration, and funded by industry. The mechanism is not well understood. It is safe and provides some micronutrients regardless of adaptogenic effect. This is a reasonable inclusion, but claims should be held lightly.</p>
+
+  <h3>Lion's mane mushroom powder</h3>
+  <p><strong>Emerging / promising but preliminary.</strong> Lion's mane (<em>Hericium erinaceus</em>) contains hericenones and erinacines, compounds shown in vitro and in rodent models to stimulate nerve growth factor (NGF) synthesis — relevant to neuroplasticity and neuroprotection. A small number of human trials suggest possible benefits for mild cognitive impairment and mood. The evidence base is not yet sufficient to make strong claims, and optimal dose is unknown. Beta-glucans in lion's mane have better-established immune-modulating effects. Worth continuing; track subjectively if you're testing personal response.</p>
+
+  <h3>Kefir</h3>
+  <p><strong>Well established.</strong> Among the most probiotic-rich foods available, with a greater diversity of bacterial strains than most yogurts. Evidence for gut microbiome modulation, improved lactose tolerance, and immune effects is solid. At ¼ cup, this is a meaningful dose — kefir's live cultures survive the blending process better than many people assume, as the mechanical disruption is brief.</p>
+
+  <h2>Missing from Current Pantry</h2>
+  <p>The following smoothie ingredients do not appear in the current stock list. Add to pantry when possible:</p>
+  <table>
+    <thead>
+      <tr><th class="sortable">Ingredient</th><th class="sortable">Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Banana</td><td>Store at room temperature; refrigerate once peeled to extend life. Freeze overripe bananas for future smoothies.</td></tr>
+      <tr><td>Chia seeds</td><td>Shelf-stable dry; store in a sealed container. Buy in bulk — they keep for 2 years.</td></tr>
+      <tr><td>Flaxseed oil</td><td>Refrigerate always; discard after 6–8 weeks of opening. Do not use for cooking.</td></tr>
+      <tr><td>Green tea powder (matcha)</td><td>Use culinary-grade for smoothies; ceremonial-grade is unnecessary at this application. Store in a sealed tin away from light.</td></tr>
+      <tr><td>Maca powder</td><td>Shelf-stable. Gelatinized form is slightly easier to digest than raw.</td></tr>
+      <tr><td>Lion's mane mushroom powder</td><td>Choose a hot-water extracted powder for beta-glucan bioavailability. Dual-extract (hot water + alcohol) captures both beta-glucans and hericenones.</td></tr>
+      <tr><td>Spirulina</td><td>Strong flavor — start with ½ tsp if new to it. Store in a sealed container away from light and heat.</td></tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

@@ -60,6 +60,11 @@
     ul, ol { padding-left: 22px; }
     li { margin: 6px 0; }
     strong { color: #3b2a1a; }
+    th.sortable { cursor: pointer; user-select: none; }
+    th.sortable:hover { background-color: #e8dcc8; }
+    th.sortable::after { content: ' ⇅'; font-size: 0.75em; color: #9b8068; }
+    th.sort-asc::after { content: ' ↑'; color: #5a3e2b; }
+    th.sort-desc::after { content: ' ↓'; color: #5a3e2b; }
     .tip {
       background: #eaf4ea;
       border-left: 4px solid #6aaa64;
@@ -159,7 +164,7 @@
   <p>Approximate values for the full marinade batch (coats ~250g paneer, serves 2). Most of the marinade is discarded or remains on the surface — absorbed amounts will be lower.</p>
   <table>
     <thead>
-      <tr><th>Ingredient</th><th>Calories</th><th>Protein</th><th>Fat</th><th>Carbs</th><th>Notable nutrients</th></tr>
+      <tr><th class="sortable">Ingredient</th><th class="sortable">Calories</th><th class="sortable">Protein</th><th class="sortable">Fat</th><th class="sortable">Carbs</th><th class="sortable">Notable nutrients</th></tr>
     </thead>
     <tbody>
       <tr><td>Labneh (3 tbsp)</td><td>~75 kcal</td><td>5g</td><td>6g</td><td>3g</td><td>Calcium, probiotics</td></tr>
@@ -204,7 +209,7 @@
   <p>Values per 100g of paneer.</p>
   <table>
     <thead>
-      <tr><th>Nutrient</th><th>Amount</th></tr>
+      <tr><th class="sortable">Nutrient</th><th class="sortable">Amount</th></tr>
     </thead>
     <tbody>
       <tr><td>Calories</td><td>265 kcal</td></tr>
@@ -219,5 +224,25 @@
     Paneer is one of the <strong>highest-protein vegetarian cheese options</strong>. Combined with legumes or vegetables it forms a complete, high-protein vegetarian meal.
   </div>
 
+  <script>
+    document.querySelectorAll('th.sortable').forEach(th => {
+      th.addEventListener('click', () => {
+        const table = th.closest('table');
+        const tbody = table.querySelector('tbody');
+        const col = th.cellIndex;
+        const asc = !th.classList.contains('sort-asc');
+        table.querySelectorAll('th').forEach(h => h.className = h.classList.contains('sortable') ? 'sortable' : '');
+        th.className = 'sortable ' + (asc ? 'sort-asc' : 'sort-desc');
+        Array.from(tbody.querySelectorAll('tr')).sort((a, b) => {
+          const av = a.cells[col] ? a.cells[col].textContent.trim() : '';
+          const bv = b.cells[col] ? b.cells[col].textContent.trim() : '';
+          const an = parseFloat(av.replace(/[^\d.]/g, ''));
+          const bn = parseFloat(bv.replace(/[^\d.]/g, ''));
+          if (!isNaN(an) && !isNaN(bn)) return asc ? an - bn : bn - an;
+          return asc ? av.localeCompare(bv) : bv.localeCompare(av);
+        }).forEach(r => tbody.appendChild(r));
+      });
+    });
+  </script>
 </body>
 </html>
