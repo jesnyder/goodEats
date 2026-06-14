@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asian Cucumber Salad — GoodEats</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #2c2c2c;
+      background: #faf9f6;
+      line-height: 1.7;
+    }
+    nav { margin-bottom: 2rem; font-size: 0.9rem; }
+    nav a { color: #5a3e2b; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    h1 {
+      font-size: 2rem;
+      border-bottom: 2px solid #c8a96e;
+      padding-bottom: 12px;
+      color: #1a1a1a;
+    }
+    h2 { font-size: 1.3rem; color: #5a3e2b; margin-top: 2rem; }
+    h3 { font-size: 1.05rem; color: #3b2a1a; margin-top: 1.5rem; margin-bottom: 0.3rem; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.92rem;
+    }
+    th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid #ddd; }
+    th { background-color: #f0e8d8; font-weight: bold; }
+    tr:hover { background-color: #faf3e8; }
+    .recipe-box {
+      background: #f0e8d8;
+      border-left: 4px solid #c8a96e;
+      padding: 16px 20px;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    .recipe-box ul, .recipe-box ol { margin: 8px 0 0; padding-left: 20px; }
+    .recipe-box li { margin: 6px 0; }
+    ul, ol { padding-left: 22px; }
+    li { margin: 6px 0; }
+    strong { color: #3b2a1a; }
+    .tip {
+      background: #eaf4ea;
+      border-left: 4px solid #6aaa64;
+      padding: 12px 16px;
+      border-radius: 4px;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .nutrition-box {
+      background: #f0f4f8;
+      border-left: 4px solid #5b8db8;
+      padding: 16px 20px;
+      border-radius: 4px;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .warning-box {
+      background: #fdf6ec;
+      border-left: 4px solid #e0a840;
+      padding: 12px 16px;
+      border-radius: 4px;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .pantry-in { color: #276035; font-weight: bold; }
+    .pantry-out { color: #b05a00; }
+    tfoot td { font-weight: bold; background: #f0e8d8; }
+    th.sortable { cursor: pointer; user-select: none; }
+    th.sortable:hover { background-color: #e8dcc8; }
+    th.sortable::after { content: ' ⇅'; font-size: 0.75em; color: #9b8068; }
+    th.sort-asc::after { content: ' ↑'; color: #5a3e2b; }
+    th.sort-desc::after { content: ' ↓'; color: #5a3e2b; }
+  </style>
+</head>
+<body>
+
+  <nav><a href="index.html">← Back to GoodEats</a></nav>
+
+  <h1>Light Tangy Asian Cucumber Salad</h1>
+  <p>A cold, crisp salad built on the Chinese smashed-cucumber technique. The dressing is tangy, slightly sweet, and umami-forward. Designed to sit alongside a warm spicy soup — the contrast of temperatures and flavors is the point. Serves 2–4 as a side.</p>
+
+  <div class="warning-box">
+    <strong>What to source:</strong> Cucumbers, sesame oil, rice vinegar, garlic, and a chili component are not currently in the pantry. All are worth keeping as staples if this becomes a regular dish. Substitutions using current pantry items are noted throughout.
+  </div>
+
+  <h2>Ingredients</h2>
+  <div class="recipe-box">
+    <ul>
+      <li>2 large English cucumbers, or 4–5 Persian cucumbers (~500g total)</li>
+      <li>1 tsp kosher salt (for drawing out water — not table salt)</li>
+    </ul>
+    <p style="margin: 12px 0 4px;"><strong>Dressing:</strong></p>
+    <ul>
+      <li>2 tbsp liquid aminos <span class="pantry-in">✓ in stock</span></li>
+      <li>1 tbsp rice vinegar <em>(preferred)</em> — or 2 tsp lemon juice <span class="pantry-in">✓ in stock</span> if substituting</li>
+      <li>1 tsp honey <span class="pantry-in">✓ in stock</span></li>
+      <li>1 tsp fresh ginger, grated <span class="pantry-in">✓ in stock</span></li>
+      <li>1 tbsp sesame oil <span class="pantry-out">✗ not in pantry — important flavor; buy if making regularly</span></li>
+      <li>2 cloves garlic, grated or minced <span class="pantry-out">✗ not in pantry</span></li>
+      <li>1–2 tsp chili crisp, chili oil, or gochugaru <span class="pantry-out">✗ not in pantry — choose heat level to match the soup</span></li>
+      <li>¼ tsp white pepper <span class="pantry-in">✓ in stock</span></li>
+    </ul>
+    <p style="margin: 12px 0 4px;"><strong>Optional garnish:</strong></p>
+    <ul>
+      <li>Sesame seeds <span class="pantry-out">✗ out of stock</span></li>
+      <li>Sliced scallions <span class="pantry-out">✗ not in pantry</span></li>
+    </ul>
+  </div>
+
+  <h2>Method</h2>
+
+  <h3>Step 1 — Prepare the cucumbers (two options)</h3>
+  <div class="recipe-box">
+    <p><strong>Option A — Smashed (recommended):</strong> Place each cucumber on a cutting board. Lay the flat of a large knife blade on top and press firmly with your palm until the cucumber cracks and splits open. Cut the smashed pieces into rough 1–2 inch chunks. The irregular jagged surfaces hold dressing far better than cut faces and give a more interesting texture.</p>
+    <p><strong>Option B — Sliced:</strong> Slice into thin rounds or bias-cut ovals (about 3mm). Cleaner presentation; less dressing absorption.</p>
+  </div>
+
+  <h3>Step 2 — Salt and drain</h3>
+  <div class="recipe-box">
+    <ol>
+      <li>Toss cucumber pieces with 1 tsp kosher salt in a colander set over a bowl.</li>
+      <li>Let drain for <strong>20–30 minutes</strong> at room temperature. The salt draws water out via osmosis, concentrating flavor in the cucumber and preventing the dressing from being diluted when it's added.</li>
+      <li>Squeeze the cucumber firmly in your hands (or wring in a clean towel) to remove as much liquid as possible. This step is not optional — skipping it produces a watery, under-flavored salad.</li>
+    </ol>
+  </div>
+
+  <div class="tip">
+    The liquid drained from the cucumber is mildly salty and cucumber-flavored. It can be added to a soup broth or discarded.
+  </div>
+
+  <h3>Step 3 — Make the dressing</h3>
+  <div class="recipe-box">
+    <ol>
+      <li>Whisk liquid aminos, rice vinegar (or lemon juice), honey, grated ginger, grated garlic, white pepper, and chili together in a small bowl.</li>
+      <li>Add sesame oil last and whisk to combine. Taste — it should be intensely flavored. It will be diluted slightly by the cucumber.</li>
+      <li>Adjust: more acid for brightness, more honey to round sharpness, more chili for heat.</li>
+    </ol>
+  </div>
+
+  <h3>Step 4 — Combine and chill</h3>
+  <div class="recipe-box">
+    <ol>
+      <li>Toss the drained cucumber with the dressing. Coat well.</li>
+      <li>Refrigerate for at least <strong>15–20 minutes</strong> before serving. The dressing penetrates the cucumber further as it sits; 30–45 minutes gives a noticeably more flavorful result.</li>
+      <li>Garnish with sesame seeds and scallions if available. Serve cold.</li>
+    </ol>
+  </div>
+
+  <h2>Why It Works with Spicy Soup</h2>
+  <p>The pairing is not incidental — the contrast is functional:</p>
+  <ul>
+    <li><strong>Temperature contrast.</strong> Cold cucumber against hot soup is refreshing in the same way that alternating hot and cold resets sensory perception. The cooling sensation is real: cucumbers are ~96% water and chilled, which briefly lowers oral temperature between bites of soup.</li>
+    <li><strong>Capsaicin relief.</strong> Cucumbers do not neutralize capsaicin (a fat-soluble compound — dairy fat does that more effectively), but the high water volume dilutes capsaicin concentration in the mouth and the brief temperature drop reduces the burning sensation. The effect is mild but real.</li>
+    <li><strong>Acid against fat and spice.</strong> The vinegar/lemon in the dressing cuts through any oil or coconut milk base in the soup and resets the palate for the next bite.</li>
+    <li><strong>Textural contrast.</strong> The crunch of cucumber against the liquid of soup adds textural variety that makes a meal feel more complete.</li>
+  </ul>
+
+  <h2>Variations</h2>
+  <ul>
+    <li><strong>Add kimchi brine</strong> <span class="pantry-in">(kimchi in stock)</span> — replace 1 tsp of the acid component with kimchi brine for a more complex, fermented tang without adding bulk.</li>
+    <li><strong>Add miso</strong> <span class="pantry-in">(in stock)</span> — dissolve ½ tsp white miso in 1 tsp warm water, add to dressing. Deepens umami. Don't use more than ½ tsp or it overpowers.</li>
+    <li><strong>Add balsamic</strong> <span class="pantry-in">(in stock)</span> — a few drops (not more) in the dressing adds a dark sweetness. Unusual but interesting.</li>
+    <li><strong>Make it a meal</strong> — toss with cold soba noodles <span class="pantry-in">(noodles in stock)</span>, add a soft-boiled egg or pan-fried tofu. The dressing doubles as a noodle sauce.</li>
+  </ul>
+
+  <h2>Nutritional Information</h2>
+  <p>Per serving (¼ of recipe). Cucumber is nutritionally modest — its value here is as a high-volume, very-low-calorie vehicle for the dressing and as a textural and thermal contrast to the soup.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="sortable">Component</th>
+        <th class="sortable">Cal</th>
+        <th class="sortable">Protein</th>
+        <th class="sortable">Fat</th>
+        <th class="sortable">Carbs</th>
+        <th>Key nutrients</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Cucumber (125g, ¼ of batch)</td>
+        <td>19</td>
+        <td>0.9g</td>
+        <td>0.1g</td>
+        <td>4.5g</td>
+        <td>Vitamin K (6% DV), potassium, vitamin C; 96% water</td>
+      </tr>
+      <tr>
+        <td>Liquid aminos (½ tbsp per serving)</td>
+        <td>3</td>
+        <td>0.5g</td>
+        <td>0g</td>
+        <td>0g</td>
+        <td>~160mg sodium</td>
+      </tr>
+      <tr>
+        <td>Rice vinegar (¼ tbsp per serving)</td>
+        <td>1</td>
+        <td>0g</td>
+        <td>0g</td>
+        <td>0.2g</td>
+        <td>Acetic acid — mild blood sugar dampening effect</td>
+      </tr>
+      <tr>
+        <td>Honey (¼ tsp per serving)</td>
+        <td>5</td>
+        <td>0g</td>
+        <td>0g</td>
+        <td>1.3g</td>
+        <td>Trace antioxidants</td>
+      </tr>
+      <tr>
+        <td>Ginger (¼ tsp per serving)</td>
+        <td>1</td>
+        <td>0g</td>
+        <td>0g</td>
+        <td>0.2g</td>
+        <td>Gingerols</td>
+      </tr>
+      <tr>
+        <td>Sesame oil (¾ tsp per serving)</td>
+        <td>30</td>
+        <td>0g</td>
+        <td>3.4g</td>
+        <td>0g</td>
+        <td>Sesamol, sesamolin (antioxidants); oleic and linoleic fat</td>
+      </tr>
+      <tr>
+        <td>Garlic (½ clove per serving)</td>
+        <td>3</td>
+        <td>0.1g</td>
+        <td>0g</td>
+        <td>0.7g</td>
+        <td>Allicin (antimicrobial, anti-inflammatory)</td>
+      </tr>
+      <tr>
+        <td>Chili crisp (½ tsp per serving)</td>
+        <td>~15</td>
+        <td>0g</td>
+        <td>1.5g</td>
+        <td>0.5g</td>
+        <td>Capsaicin; varies by brand</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Total per serving</td>
+        <td>~77 kcal</td>
+        <td>~1.5g</td>
+        <td>~5g</td>
+        <td>~7.4g</td>
+        <td>~160–200mg sodium (before garnish)</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div class="nutrition-box">
+    <strong>This is not a protein dish</strong> — at ~1.5g per serving, it contributes negligibly to daily protein needs. Its role is textural and sensory contrast alongside a more substantial course. To increase protein, extend it into a noodle dish (see Variations) or serve alongside tofu or lentil-based soup.
+  </div>
+
+  <h2>Items to Add to Pantry</h2>
+  <table>
+    <thead>
+      <tr><th>Item</th><th>Why</th><th>Storage</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>English or Persian cucumbers</td><td>Main ingredient. Persian cucumbers are smaller, fewer seeds, thinner skin — better texture.</td><td>Refrigerator, 5–7 days</td></tr>
+      <tr><td>Sesame oil (toasted)</td><td>Signature flavor of the dressing — difficult to replicate. Use as a finishing oil, not for cooking.</td><td>Cool, dark place; 6–12 months</td></tr>
+      <tr><td>Rice vinegar</td><td>Lighter, milder acid than lemon juice or balsamic; right balance for Asian dressings.</td><td>Pantry, 2+ years</td></tr>
+      <tr><td>Garlic</td><td>Core aromatic missing from pantry entirely.</td><td>Cool, dry, dark; 3–5 months</td></tr>
+      <tr><td>Chili crisp (e.g., Lao Gan Ma)</td><td>Heat, flavor, and texture in one; more complex than plain chili flakes.</td><td>Pantry; refrigerate after opening</td></tr>
+    </tbody>
+  </table>
+
+  <script>
+    document.querySelectorAll('th.sortable').forEach(th => {
+      th.addEventListener('click', () => {
+        const table = th.closest('table');
+        const tbody = table.querySelector('tbody');
+        const col = th.cellIndex;
+        const asc = !th.classList.contains('sort-asc');
+        table.querySelectorAll('th').forEach(h => h.className = h.classList.contains('sortable') ? 'sortable' : '');
+        th.className = 'sortable ' + (asc ? 'sort-asc' : 'sort-desc');
+        Array.from(tbody.querySelectorAll('tr')).sort((a, b) => {
+          const av = a.cells[col] ? a.cells[col].textContent.trim() : '';
+          const bv = b.cells[col] ? b.cells[col].textContent.trim() : '';
+          const an = parseFloat(av.replace(/[^\d.]/g, ''));
+          const bn = parseFloat(bv.replace(/[^\d.]/g, ''));
+          if (!isNaN(an) && !isNaN(bn)) return asc ? an - bn : bn - an;
+          return asc ? av.localeCompare(bv) : bv.localeCompare(av);
+        }).forEach(r => tbody.appendChild(r));
+      });
+    });
+  </script>
+
+</body>
+</html>

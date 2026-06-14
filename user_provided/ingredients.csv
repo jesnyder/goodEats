@@ -1,5 +1,9 @@
 Items (if an "N - " begins the line, the item is not in stock) 
 
+Carbohydrate - Noodle 
+Carbohydrate - Rice
+
+Dairy - Feta cheese 
 Dairy - Keifer 
 Dairy - Labneh 
 Dairy - Soy milk 
@@ -14,6 +18,7 @@ Produce - Bannana
 Produce - Beets
 Produce - Brussel Sprouts 
 Produce - Celery 
+Produce - Cucumber 
 Produce - Ginger
 Produce - Kale 
 Produce - Lemon juice
@@ -30,7 +35,11 @@ N - Sauce - Peanut butter
 N - Seasoninig - Cocunut flakes 
 Seasoning - Honey
 Seasoning - Liquid aminos
+Seasoning - Nutritional yeast
+Seasoning - Wheat germ
 
+Seeds - Chia seeds 
+N - Seeds - Flax seeds 
 N - Seeds - Seasame seeds
 
 Spice - Cumin

@@ -10,12 +10,15 @@ This repository organizes cooking recipes, kitchen techniques, and nutritional i
 goodEats/
 ├── README.md                        # This file — project objective and AI guidance
 ├── docs/
+│   ├── style.css                    # Shared stylesheet for index.html (warm palette, card grid, table, sortable headers)
 │   ├── index.html                   # Landing page: recipe links (single column) + nutritional summary table (sortable by protein)
 │   ├── marinating-tofu.html         # Tofu prep, marinade, cooking, nutrition
 │   ├── marinating-paneer.html       # Paneer marinade options (incl. Labneh & Miso), cooking methods, nutrition
 │   ├── preparing-beets.html         # Beet prep: boiled, steamed, roasted, grilled, pressure cooked, raw — with nutritional tradeoffs table
+│   ├── cucumber-salad.html          # Cold Asian smashed-cucumber salad; pairs with warm spicy soup
 │   ├── morning-smoothie.html        # Daily 1L smoothie — ingredients, method, per-ingredient nutrition, notes on functional ingredients
-│   └── ingredients.html             # Pantry reference table — all ingredients with nutritional info, culinary role, stock status; filterable and sortable
+│   ├── ingredients.html             # Pantry reference table — all ingredients with nutritional info, culinary role, stock status; filterable and sortable
+│   └── about.html                   # Site philosophy, dietary approach, kitchen setup, evidence standards
 ├── recipes/
 │   ├── marinating-tofu.md           # Markdown source for tofu page
 │   └── marinating-paneer.md         # Markdown source for paneer page
