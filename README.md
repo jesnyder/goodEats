@@ -31,11 +31,14 @@ goodEats/
 ## Dietary & Preference Context
 
 Always check `user_provided/dietary_restrictions.csv` before writing recipes or techniques. Current guidance:
-- Vegetarian
+- **Vegetarian. No seafood.** When listing foods as "not available," say "No (seafood — excluded)" rather than "not vegetarian" — the distinction matters.
 - Light on cheese
 - High protein is a priority — prefer preparations and ingredients that maximize protein density
+- **Iron is a personal health priority.** History of low iron; vegetarian diet means only non-heme iron (2–20% absorption); daily cycling increases oxygen/hemoglobin demand. Flag iron content, absorption enhancers (vitamin C), and inhibitors (tannins, calcium, phytates) throughout. Recommend pairing iron-rich foods with vitamin C and separating from tea/dairy.
+- **Cycling commuter — higher energy and endurance nutrition needs.** Carbohydrates are performance fuel, not something to minimize. Electrolyte, glycogen replenishment, and recovery are relevant. Beets (dietary nitrate → endurance) are especially relevant.
 - Equipment available: oven, stove, Instant Pot
 - Enjoys: beans, tomatoes, vegetables
+- User is a scientist — values cause-and-effect explanations, evidence quality, and honesty about uncertainty. State confidence levels. Do not hallucinate.
 
 ## Guidance for Future AI Assistance
 
