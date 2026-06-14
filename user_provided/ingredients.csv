@@ -1,5 +1,7 @@
 Items (if an "N - " begins the line, the item is not in stock) 
 
+Carbohydrate - Barley
+Carbohydrate - Bulgar wheat
 Carbohydrate - Noodle 
 Carbohydrate - Rice
 
@@ -13,6 +15,7 @@ Fermented - Kimchi
 Fermented - Mango pickle chutney 
 Fermented - Miso paste  
 Fermented - Pickles 
+Fermented - Vinegar, white
 
 Produce - Bannana 
 Produce - Beets
@@ -21,6 +24,7 @@ Produce - Celery
 Produce - Cucumber 
 Produce - Eggs
 Produce - Ginger
+Produce - Ginger, dried
 Produce - Kale 
 Produce - Lemon juice
 Produce - Spinach 
@@ -32,6 +36,7 @@ Protein - Lentils
 N - Sauce - Almond butter
 Sauce - Pesto
 N - Sauce - Peanut butter 
+Sauce - Seasame oil
 
 N - Seasoninig - Cocunut flakes 
 Seasoning - Honey
@@ -39,9 +44,11 @@ Seasoning - Liquid aminos
 Seasoning - Nutritional yeast
 Seasoning - Wheat germ
 
+Seeds - Caraway 
 Seeds - Chia seeds 
 N - Seeds - Flax seeds 
-N - Seeds - Seasame seeds
+Seeds - Mustard
+Seeds - Seasame seeds
 
 Spice - Cumin
 Spice - Salt
