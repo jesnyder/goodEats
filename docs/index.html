@@ -83,11 +83,23 @@
       font-size: 0.95rem;
     }
     strong { color: #3b2a1a; }
+    th.sortable {
+      cursor: pointer;
+      user-select: none;
+    }
+    th.sortable:hover { background-color: #e8dcc8; }
+    th.sortable::after {
+      content: ' ⇅';
+      font-size: 0.8em;
+      color: #9b8068;
+    }
+    th.sort-asc::after { content: ' ↑'; color: #5a3e2b; }
+    th.sort-desc::after { content: ' ↓'; color: #5a3e2b; }
   </style>
 </head>
 <body>
 
-  <h1>GoodEats</h1>
+  <h1>Jessipes for Good Eats</h1>
   <p class="subtitle">Recipes, kitchen techniques, and nutritional guidance — vegetarian &amp; high protein.</p>
 
   <h2>Recipes &amp; Techniques</h2>
@@ -109,7 +121,7 @@
     <thead>
       <tr>
         <th>Ingredient</th>
-        <th>Protein (per 100g)</th>
+        <th class="sortable" id="protein-header">Protein (per 100g)</th>
         <th>Calories</th>
         <th>Notes</th>
       </tr>
@@ -140,5 +152,20 @@
     <strong>High-protein tip:</strong> Always freeze and press tofu before marinating — it removes water and concentrates protein per serving. Pair paneer or tofu with beans or vegetables to build a complete, balanced meal.
   </div>
 
+  <script>
+    const header = document.getElementById('protein-header');
+    let ascending = null;
+    header.addEventListener('click', () => {
+      ascending = ascending === true ? false : true;
+      header.className = 'sortable ' + (ascending ? 'sort-asc' : 'sort-desc');
+      const tbody = document.querySelector('table tbody');
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+      rows.sort((a, b) => {
+        const val = r => parseFloat(r.cells[1].textContent.replace(/[^\d.]/g, ''));
+        return ascending ? val(a) - val(b) : val(b) - val(a);
+      });
+      rows.forEach(r => tbody.appendChild(r));
+    });
+  </script>
 </body>
 </html>
