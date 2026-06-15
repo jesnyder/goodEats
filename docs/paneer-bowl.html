@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Labneh &amp; Miso Paneer Bowl — GoodEats</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #2c2c2c;
+      background: #faf9f6;
+      line-height: 1.7;
+    }
+    nav { margin-bottom: 2rem; font-size: 0.9rem; }
+    nav a { color: #5a3e2b; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    h1 {
+      font-size: 2rem;
+      border-bottom: 2px solid #c8a96e;
+      padding-bottom: 12px;
+      color: #1a1a1a;
+    }
+    h2 { font-size: 1.3rem; color: #5a3e2b; margin-top: 2rem; }
+    h3 { font-size: 1.05rem; color: #3b2a1a; margin-top: 1.5rem; margin-bottom: 0.3rem; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+    th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid #ddd; }
+    th { background-color: #f0e8d8; font-weight: bold; }
+    tr:hover { background-color: #faf3e8; }
+    .recipe-box {
+      background: #f0e8d8;
+      border-left: 4px solid #c8a96e;
+      padding: 16px 20px;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    .recipe-box ol, .recipe-box ul { margin: 8px 0 0; padding-left: 20px; }
+    .recipe-box li { margin: 6px 0; }
+    ul, ol { padding-left: 22px; }
+    li { margin: 6px 0; }
+    strong { color: #3b2a1a; }
+    .tip {
+      background: #eaf4ea;
+      border-left: 4px solid #6aaa64;
+      padding: 12px 16px;
+      border-radius: 4px;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .nutrition-box {
+      background: #f0f4f8;
+      border-left: 4px solid #5b8db8;
+      padding: 16px 20px;
+      border-radius: 4px;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .warning-box {
+      background: #fdf6ec;
+      border-left: 4px solid #e0a840;
+      padding: 12px 16px;
+      border-radius: 4px;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .pantry-in { color: #276035; font-weight: bold; }
+    .pantry-out { color: #b05a00; }
+    tfoot td { font-weight: bold; background: #f0e8d8; }
+    th.sortable { cursor: pointer; user-select: none; }
+    th.sortable:hover { background-color: #e8dcc8; }
+    th.sortable::after { content: ' ⇅'; font-size: 0.75em; color: #9b8068; }
+    th.sort-asc::after { content: ' ↑'; color: #5a3e2b; }
+    th.sort-desc::after { content: ' ↓'; color: #5a3e2b; }
+    td a { color: #5a3e2b; text-decoration: underline dotted; }
+    td a:hover { text-decoration: underline; }
+    .timing-table td:first-child { white-space: nowrap; font-weight: bold; color: #5a3e2b; }
+  </style>
+</head>
+<body>
+
+  <nav><a href="index.html">← Back to GoodEats</a></nav>
+
+  <h1>Labneh &amp; Miso Paneer Bowl</h1>
+  <p>A warm, umami-forward dinner built around pan-fried paneer in a labneh and miso marinade, roasted sweet potato, Brussels sprouts, beets, and red onion, wilted spinach with nutritional yeast, and a cold Szechuan peppercorn celery on the side. The cold celery plays the same role the cucumber does in the <a href="cucumber-salad.html" style="color: #5a3e2b;">Asian Cucumber Salad</a> — temperature and textural contrast against the warm plate. Serves 2.</p>
+
+  <div class="tip">
+    <strong>Marinade ahead.</strong> Paneer needs at least 2 hours in the Labneh &amp; Miso marinade — up to 4 hours is better. The beets can be par-cooked in the Instant Pot in advance and stored in the fridge until ready to roast with the other vegetables.
+  </div>
+
+  <h2>Ingredients</h2>
+
+  <div class="recipe-box">
+    <p style="margin: 0 0 8px;"><strong>Paneer &amp; marinade</strong> — see <a href="marinating-paneer.html" style="color: #5a3e2b;">Marinating &amp; Cooking Paneer</a> for full marinade notes</p>
+    <ul>
+      <li>250g paneer, cut into 1-inch cubes or thick slabs <span class="pantry-in">✓ in stock</span></li>
+      <li>3 tbsp labneh (or thick strained yogurt) <span class="pantry-in">✓ in stock</span></li>
+      <li>2 tbsp kefir <span class="pantry-in">✓ in stock</span></li>
+      <li>1 tbsp white miso paste <span class="pantry-in">✓ in stock</span></li>
+      <li>½ tbsp liquid aminos <em>(optional — reduce miso to ½ tbsp if using)</em> <span class="pantry-in">✓ in stock</span></li>
+      <li>2 tbsp red onion, grated <span class="pantry-in">✓ in stock</span></li>
+      <li>1 tbsp lemon juice <span class="pantry-in">✓ in stock</span></li>
+      <li>1 tsp cumin <span class="pantry-in">✓ in stock</span></li>
+      <li>1 tsp smoked paprika <span class="pantry-in">✓ in stock</span></li>
+      <li>¼ tsp white pepper <span class="pantry-in">✓ in stock</span></li>
+      <li>1½ tsp za'atar, divided — 1 tsp in marinade, ½ tsp to finish <span class="pantry-in">✓ in stock</span></li>
+    </ul>
+  </div>
+
+  <div class="recipe-box">
+    <p style="margin: 0 0 8px;"><strong>Roasted vegetables</strong></p>
+    <ul>
+      <li>2 medium sweet potatoes, cut into wedges <span class="pantry-in">✓ in stock</span></li>
+      <li>300g Brussels sprouts, halved <span class="pantry-in">✓ in stock</span></li>
+      <li>2–3 medium beets, whole and unpeeled <em>(or pre-cooked in Instant Pot and peeled)</em> <span class="pantry-in">✓ in stock</span></li>
+      <li>1 red onion, cut into wedges <span class="pantry-in">✓ in stock</span></li>
+      <li>Olive oil, salt to coat</li>
+      <li>Extra pinch of cumin for the sweet potato</li>
+    </ul>
+  </div>
+
+  <div class="recipe-box">
+    <p style="margin: 0 0 8px;"><strong>Wilted spinach</strong></p>
+    <ul>
+      <li>2 large handfuls spinach (~100g) <span class="pantry-in">✓ in stock</span></li>
+      <li>2 tbsp nutritional yeast <span class="pantry-in">✓ in stock</span></li>
+      <li>Squeeze of lemon <span class="pantry-in">✓ in stock</span></li>
+    </ul>
+  </div>
+
+  <div class="recipe-box">
+    <p style="margin: 0 0 8px;"><strong>Szechuan peppercorn celery</strong> — served cold</p>
+    <ul>
+      <li>4 stalks celery, sliced thin on the bias (~3mm diagonal cuts) <span class="pantry-in">✓ in stock</span></li>
+      <li>1 tbsp Szechuan peppercorn oil <span class="pantry-in">✓ in stock</span> — see <a href="cucumber-salad.html" style="color: #5a3e2b;">Asian Cucumber Salad</a> for preparation</li>
+      <li>1 tsp liquid aminos <span class="pantry-in">✓ in stock</span></li>
+      <li>¼ tsp white pepper <span class="pantry-in">✓ in stock</span></li>
+      <li>Squeeze of lemon</li>
+    </ul>
+  </div>
+
+  <h2>Method</h2>
+
+  <h3>Step 1 — Marinate the paneer (2–4 hours ahead)</h3>
+  <div class="recipe-box">
+    <ol>
+      <li>Whisk together labneh, kefir, miso, liquid aminos (if using), grated red onion, lemon juice, cumin, smoked paprika, white pepper, and 1 tsp of the za'atar.</li>
+      <li>Add paneer pieces and turn to coat well. Cover and refrigerate for at least 2 hours, up to 4.</li>
+      <li>Hold back the remaining ½ tsp za'atar — sprinkle it on immediately after cooking, not before.</li>
+    </ol>
+  </div>
+
+  <h3>Step 2 — Roast the vegetables</h3>
+  <div class="recipe-box">
+    <p><strong>Oven at 400°F (200°C).</strong></p>
+    <p style="margin: 8px 0 4px;"><em>If roasting beets from raw:</em></p>
+    <ol>
+      <li>Wrap whole unpeeled beets individually in foil. Place in oven. These take 45–60 minutes and go in first.</li>
+    </ol>
+    <p style="margin: 12px 0 4px;"><em>If beets are already par-cooked (e.g. Instant Pot):</em></p>
+    <ol>
+      <li>Cut par-cooked, peeled beets into wedges. Toss in olive oil and add to the sheet pan for the last 15–20 minutes of roasting — they just need to pick up color and heat through.</li>
+    </ol>
+    <p style="margin: 12px 0 4px;"><em>Sheet pan (add 35–40 min before serving):</em></p>
+    <ol>
+      <li>Toss sweet potato wedges with olive oil, salt, and a pinch of cumin. Spread on a lined sheet pan.</li>
+      <li>Halve Brussels sprouts and place cut-side down on the same pan. Cut side down is not optional — it's what creates the caramelized, slightly charred face. Toss with olive oil and salt.</li>
+      <li>Add red onion wedges to the pan. Toss in a little oil.</li>
+      <li>Roast 35–40 minutes until sweet potato is tender and Brussels sprouts are deeply golden on the cut face. Do not stir — let the cut sides stay in contact with the hot pan.</li>
+      <li>Add beet wedges in the last 15–20 minutes.</li>
+      <li>When everything comes out, squeeze lemon over the beets. Cuts earthiness and improves iron absorption from the spinach to follow.</li>
+    </ol>
+  </div>
+
+  <h3>Step 3 — Dress the celery (30 min before serving)</h3>
+  <div class="recipe-box">
+    <ol>
+      <li>Slice celery thin on the bias — diagonal cuts about 3mm thick give more surface area and a better texture than straight rounds.</li>
+      <li>Toss with Szechuan peppercorn oil, liquid aminos, white pepper, and a squeeze of lemon.</li>
+      <li>Refrigerate until plating. The celery should be cold when it hits the plate — temperature contrast is the point.</li>
+    </ol>
+  </div>
+
+  <h3>Step 4 — Pan-fry the paneer (10 min before serving)</h3>
+  <div class="recipe-box">
+    <ol>
+      <li><strong>Pat dry thoroughly.</strong> Press each piece with paper towel until the surface feels tacky, not wet. The labneh and kefir hold moisture — if you skip this step the paneer steams instead of browning.</li>
+      <li>Heat a pan over medium-high heat with a small amount of oil.</li>
+      <li>Add paneer without crowding. <strong>Do not move it</strong> until it releases naturally from the pan — 2–3 minutes per side.</li>
+      <li>Flip and cook the other side. The surface should be golden-brown. Labneh is a soft cheese and does not char at high heat — the gentle browning you see is correct; do not increase heat trying to get a crust.</li>
+      <li>Remove from pan. <strong>Immediately</strong> sprinkle the reserved ½ tsp za'atar over the hot surface — it sticks to the tacky coating and adds a fresh herby note on top of the cooked marinade.</li>
+    </ol>
+  </div>
+
+  <h3>Step 5 — Wilt the spinach (right after paneer)</h3>
+  <div class="recipe-box">
+    <ol>
+      <li>Without cleaning the pan, drop the spinach directly into the residual heat. Toss once or twice — it wilts in 60–90 seconds.</li>
+      <li>Squeeze lemon over the wilted spinach.</li>
+      <li>Sprinkle nutritional yeast over the top. The moisture from the spinach helps it cling. Remove from heat immediately.</li>
+    </ol>
+  </div>
+
+  <h3>Step 6 — Plate</h3>
+  <div class="recipe-box">
+    <ol>
+      <li>Warm roasted vegetables as the base: beet wedges, sweet potato, Brussels sprouts, red onion.</li>
+      <li>Spinach with nutritional yeast alongside the roasted vegetables.</li>
+      <li>Paneer on top of or alongside the vegetables.</li>
+      <li>Cold dressed celery on the side — keep it separate so it stays cold and crunchy against the warm plate.</li>
+      <li>A drizzle of any remaining Szechuan peppercorn oil over the full plate to finish.</li>
+    </ol>
+  </div>
+
+  <h2>Timing</h2>
+  <table class="timing-table">
+    <thead>
+      <tr><th>Time before serving</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>2–4 hours</td><td>Marinate paneer</td></tr>
+      <tr><td>60 min</td><td>Beets into oven (if roasting from raw, foil-wrapped)</td></tr>
+      <tr><td>40 min</td><td>Sweet potato, Brussels sprouts, red onion onto sheet pan</td></tr>
+      <tr><td>30 min</td><td>Dress celery; refrigerate</td></tr>
+      <tr><td>20 min</td><td>Add par-cooked beet wedges to sheet pan</td></tr>
+      <tr><td>10 min</td><td>Pat paneer dry; heat pan</td></tr>
+      <tr><td>7 min</td><td>Sear paneer first side</td></tr>
+      <tr><td>4 min</td><td>Flip paneer; sear second side</td></tr>
+      <tr><td>2 min</td><td>Remove paneer; za'atar finish; drop spinach into pan</td></tr>
+      <tr><td>1 min</td><td>Lemon + nutritional yeast on spinach; pull oven pan</td></tr>
+      <tr><td>0</td><td>Plate and serve</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Why the Szechuan peppercorn celery works</h2>
+  <p>The cold celery plays the same structural role the cucumber does in the <a href="cucumber-salad.html" style="color: #5a3e2b;">Asian Cucumber Salad</a>. Sanshool — the active compound in Szechuan peppercorns — produces a numbing, tingling sensation by activating touch receptors (KCNK3/5 potassium channels), distinct from chili heat. This temporarily dampens the perception of both sharpness and warmth, making each bite of the warm plate feel more vivid afterward. The cold temperature and crunch of raw celery reinforce that reset between bites.</p>
+  <p>Celery is ~95% water and stays crisp under the dressing because it lacks the high pectin content that softens cucumber rapidly. Bias-cut slices (diagonal) give more surface area for the dressing to coat and a more interesting texture than straight rounds.</p>
+
+  <h2>Nutritional Information</h2>
+  <p>Per serving (½ of recipe). Values are approximate. Marinade values reflect absorbed amounts only — most stays on the surface.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="sortable">Component</th>
+        <th class="sortable">Cal</th>
+        <th class="sortable">Protein</th>
+        <th class="sortable">Fat</th>
+        <th class="sortable">Carbs</th>
+        <th>Key nutrients</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Paneer (125g)</td>
+        <td>331</td>
+        <td>22.5g</td>
+        <td>25g</td>
+        <td>1.5g</td>
+        <td>Calcium (~600mg, 46% DV), complete protein, phosphorus</td>
+      </tr>
+      <tr>
+        <td><a href="https://fdc.nal.usda.gov/food-details/2346404/nutrients" target="_blank" rel="noopener">Sweet potato</a>, roasted (100g)</td>
+        <td>90</td>
+        <td>1.6g</td>
+        <td>0.1g</td>
+        <td>21g</td>
+        <td>Beta-carotene (vitamin A, ~284% DV), potassium, fiber, vitamin C</td>
+      </tr>
+      <tr>
+        <td><a href="https://fdc.nal.usda.gov/food-details/2685575/nutrients" target="_blank" rel="noopener">Brussels sprouts</a>, roasted (75g)</td>
+        <td>32</td>
+        <td>2.4g</td>
+        <td>0.3g</td>
+        <td>6.7g</td>
+        <td>Vitamin C (75% DV per 100g), vitamin K, folate, glucosinolates</td>
+      </tr>
+      <tr>
+        <td><a href="https://fdc.nal.usda.gov/food-details/2685576/nutrients" target="_blank" rel="noopener">Beets</a>, roasted (75g)</td>
+        <td>32</td>
+        <td>1.2g</td>
+        <td>0.1g</td>
+        <td>8.9g</td>
+        <td>Dietary nitrates (endurance support), folate (20% DV), potassium</td>
+      </tr>
+      <tr>
+        <td><a href="https://fdc.nal.usda.gov/food-details/790577/nutrients" target="_blank" rel="noopener">Red onion</a>, roasted (30g)</td>
+        <td>12</td>
+        <td>0.3g</td>
+        <td>0g</td>
+        <td>2.8g</td>
+        <td>Quercetin, anthocyanins (antioxidants)</td>
+      </tr>
+      <tr>
+        <td><a href="https://fdc.nal.usda.gov/food-details/168462/nutrients" target="_blank" rel="noopener">Spinach</a>, wilted (50g)</td>
+        <td>11</td>
+        <td>1.4g</td>
+        <td>0.2g</td>
+        <td>1.7g</td>
+        <td>Iron (1.3mg, 7% DV), folate (31% DV), vitamin K (290% DV), magnesium</td>
+      </tr>
+      <tr>
+        <td><a href="https://fdc.nal.usda.gov/food-details/2421410/nutrients" target="_blank" rel="noopener">Nutritional yeast</a> (1 tbsp)</td>
+        <td>22</td>
+        <td>4g</td>
+        <td>0.5g</td>
+        <td>2.5g</td>
+        <td>B12 (~167% DV if fortified), zinc (~9% DV), complete protein</td>
+      </tr>
+      <tr>
+        <td><a href="https://fdc.nal.usda.gov/food-details/2346405/nutrients" target="_blank" rel="noopener">Celery</a>, raw (80g)</td>
+        <td>13</td>
+        <td>0.7g</td>
+        <td>0.2g</td>
+        <td>3g</td>
+        <td>Vitamin K (22% DV), folate, potassium; ~95% water</td>
+      </tr>
+      <tr>
+        <td>Marinade — absorbed (labneh, kefir, miso)</td>
+        <td>~35</td>
+        <td>2g</td>
+        <td>2.5g</td>
+        <td>2g</td>
+        <td>Probiotics (kefir, labneh), calcium, ~200mg sodium (miso)</td>
+      </tr>
+      <tr>
+        <td>Szechuan peppercorn oil (½ tbsp)</td>
+        <td>60</td>
+        <td>0g</td>
+        <td>7g</td>
+        <td>0g</td>
+        <td>Sanshool (sensory compound); monounsaturated and polyunsaturated fats</td>
+      </tr>
+      <tr>
+        <td>Olive oil for roasting (~2 tsp)</td>
+        <td>79</td>
+        <td>0g</td>
+        <td>9g</td>
+        <td>0g</td>
+        <td>Oleic acid (monounsaturated), vitamin E, polyphenols</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Per serving</td>
+        <td>~717 kcal</td>
+        <td>~36g</td>
+        <td>~45g</td>
+        <td>~50g</td>
+        <td>~200–400mg sodium (before tasting/adjusting)</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div class="nutrition-box">
+    <strong>Strong meal for a cycling day.</strong> At ~36g protein per serving, this exceeds the threshold for maximally stimulating muscle protein synthesis (~25–40g per meal). The carbohydrates from sweet potato (~21g per serving) provide sustained glycogen fuel. Beet dietary nitrates convert to nitric oxide in the body, which improves blood vessel dilation and oxygen delivery to muscles — effects are most pronounced within 2–3 hours of eating.
+  </div>
+
+  <div class="tip">
+    <strong>Iron timing.</strong> Spinach contributes non-heme iron (~1.3mg per 50g wilted). The lemon juice added to the spinach provides vitamin C, which meaningfully enhances non-heme iron absorption. This meal does not contain the main inhibitors present in the morning smoothie (no matcha tannins, no large calcium load at the same time as the iron source) — iron absorption here will be better than from the smoothie.
+  </div>
+
+  <div class="tip">
+    <strong>Brussels sprouts and glucosinolates.</strong> Roasting at high heat preserves glucosinolates better than boiling — they leach into cooking water when boiled, but stay in the vegetable when roasted. Glucosinolates are the same sulfur-containing compounds found in kale, broccoli, and cabbage; they are converted to isothiocyanates in the gut, which have well-established evidence for reducing cancer risk across multiple epidemiological studies.
+  </div>
+
+  <script>
+    document.querySelectorAll('th.sortable').forEach(th => {
+      th.addEventListener('click', () => {
+        const table = th.closest('table');
+        const tbody = table.querySelector('tbody');
+        const col = th.cellIndex;
+        const asc = !th.classList.contains('sort-asc');
+        table.querySelectorAll('th').forEach(h => h.className = h.classList.contains('sortable') ? 'sortable' : '');
+        th.className = 'sortable ' + (asc ? 'sort-asc' : 'sort-desc');
+        Array.from(tbody.querySelectorAll('tr')).sort((a, b) => {
+          const av = a.cells[col] ? a.cells[col].textContent.trim() : '';
+          const bv = b.cells[col] ? b.cells[col].textContent.trim() : '';
+          const an = parseFloat(av.replace(/[^\d.]/g, ''));
+          const bn = parseFloat(bv.replace(/[^\d.]/g, ''));
+          if (!isNaN(an) && !isNaN(bn)) return asc ? an - bn : bn - an;
+          return asc ? av.localeCompare(bv) : bv.localeCompare(av);
+        }).forEach(r => tbody.appendChild(r));
+      });
+    });
+  </script>
+
+</body>
+</html>

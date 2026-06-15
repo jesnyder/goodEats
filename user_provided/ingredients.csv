@@ -27,21 +27,40 @@ Fermented - Vinegar, White
 Produce - Bannana 
 Produce - Beets
 Produce - Brussel Sprouts 
+N - Produce - Carrot 
 Produce - Celery 
 N - Produce - Cucumber 
+N - Produce - Dates
 Produce - Eggs
+N - Produce - Garlic, bulb 
 Produce - Ginger
 Produce - Ginger, dried
 Produce - Kale 
+Produce - Leeks 
 Produce - Lemon juice
 Produce - Onion, red
 Produce - Onion, yellow
+N - Produce - Raisins
 Produce - Spinach 
+N - Produce - Squash, Acorn 
+N - Produce - Squash, Butternut 
+N - Produce - Squash, Spaghetti
 Produce - Sweet potato
 
 Protein - Beans 
-Protein - Black, can 
+Protein - Beans, Black 
+N - Protein - Beans, Chickpeas
+N - Protein - Beans, Great northern 
+N - Protein - Beans, Pinto
+N - Protein - Beans, Red
+N - Protein - Beans, Runner beans
 Protein - Lentils
+N - Protein - Almond, slices
+N - Protein - Cashews
+N - Protein - Mixed
+N - Protein - Peanuts, in the shell
+N - Protein - Pistachios 
+N - Protein - Walnuts
 Protein - Pinto, cooked 
 Protein - Whey protein powder, 60 g protein / 1 scoop (44 g) 
 
@@ -56,6 +75,7 @@ N - Seasoninig - Cocunut flakes
 Seasoning - Honey
 Seasoning - Liquid aminos
 Seasoning - Nutritional yeast
+Seasoning - Psyllium husk, powder
 Seasoning - Wheat germ
 
 Seeds - Caraway 
