@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Sisters Bowl - GoodEats</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #2c2c2c;
+      background: #faf9f6;
+      line-height: 1.7;
+    }
+    nav { margin-bottom: 2rem; font-size: 0.9rem; }
+    nav a { color: #5a3e2b; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    h1 {
+      font-size: 2rem;
+      border-bottom: 2px solid #c8a96e;
+      padding-bottom: 12px;
+      color: #1a1a1a;
+    }
+    h2 { font-size: 1.3rem; color: #5a3e2b; margin-top: 2rem; }
+    h3 { font-size: 1.05rem; color: #3b2a1a; margin-top: 1.5rem; margin-bottom: 0.3rem; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+    th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid #ddd; }
+    th { background-color: #f0e8d8; font-weight: bold; }
+    tr:hover { background-color: #faf3e8; }
+    .recipe-box {
+      background: #f0e8d8;
+      border-left: 4px solid #c8a96e;
+      padding: 16px 20px;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    .recipe-box ol, .recipe-box ul { margin: 8px 0 0; padding-left: 20px; }
+    .recipe-box li { margin: 6px 0; }
+    ul, ol { padding-left: 22px; }
+    li { margin: 6px 0; }
+    strong { color: #3b2a1a; }
+    .tip {
+      background: #eaf4ea;
+      border-left: 4px solid #6aaa64;
+      padding: 12px 16px;
+      border-radius: 4px;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .nutrition-box {
+      background: #f0f4f8;
+      border-left: 4px solid #5b8db8;
+      padding: 16px 20px;
+      border-radius: 4px;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .warning-box {
+      background: #fdf6ec;
+      border-left: 4px solid #e0a840;
+      padding: 12px 16px;
+      border-radius: 4px;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .pantry-in { color: #276035; font-weight: bold; }
+    .pantry-out { color: #b05a00; }
+    tfoot td { font-weight: bold; background: #f0e8d8; }
+    th.sortable { cursor: pointer; user-select: none; }
+    th.sortable:hover { background-color: #e8dcc8; }
+    th.sortable::after { content: ' ⇅'; font-size: 0.75em; color: #9b8068; }
+    th.sort-asc::after { content: ' ↑'; color: #5a3e2b; }
+    th.sort-desc::after { content: ' ↓'; color: #5a3e2b; }
+    td a { color: #5a3e2b; text-decoration: underline dotted; }
+    td a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <nav><a href="index.html">&#8592; Back to GoodEats</a></nav>
+
+  <h1>Three Sisters Bowl</h1>
+  <p>A North American chaat-style bowl built around the Three Sisters - squash, beans, and peas - simmered in a spiced tomato and coconut milk broth. The Three Sisters is a planting tradition of Indigenous North American nations (Haudenosaunee, Anishinaabe, and others) in which squash, corn, and beans are grown together: beans fix nitrogen for the corn, corn provides a climbing structure for the beans, and squash spreads along the ground to suppress weeds and retain moisture. This version adapts the core idea with peas in place of corn, butternut squash roasted separately for texture, and layered warm spicing in the chaat style. Serves 2.</p>
+
+  <div class="tip">
+    <strong>Roast the squash separately.</strong> Simmering squash in the stew makes it soft and smooth - good for a thick broth. Roasting it first, then adding at the end, gives you caramelized edges and two textures in the bowl. Both approaches are correct; this recipe does the latter.
+  </div>
+
+  <h2>Ingredients</h2>
+
+  <div class="recipe-box">
+    <p style="margin: 0 0 8px;"><strong>Three Sisters</strong></p>
+    <ul>
+      <li>1 small butternut squash (~500g), peeled and cut into 2cm cubes <span class="pantry-out">&#9651; out of stock</span></li>
+      <li>1 can (400g) black beans or chickpeas, drained and rinsed <em>(chickpeas are out of stock; black beans are in stock)</em> <span class="pantry-in">&#10003; black beans in stock</span></li>
+      <li>120g frozen or fresh green peas <span class="pantry-out">&#9651; not in pantry - add to shopping list</span></li>
+    </ul>
+  </div>
+
+  <div class="recipe-box">
+    <p style="margin: 0 0 8px;"><strong>Tomato-coconut broth</strong></p>
+    <ul>
+      <li>2 tbsp tomato paste <span class="pantry-out">&#9651; not in pantry - add to shopping list</span></li>
+      <li>200ml full-fat coconut milk (about half a standard can) <span class="pantry-out">&#9651; not in pantry - add to shopping list</span></li>
+      <li>150ml water</li>
+      <li>1 tbsp olive oil or coconut oil <span class="pantry-in">&#10003; in stock</span></li>
+    </ul>
+  </div>
+
+  <div class="recipe-box">
+    <p style="margin: 0 0 8px;"><strong>Aromatics and spice</strong></p>
+    <ul>
+      <li>1 red onion, diced <span class="pantry-in">&#10003; in stock</span></li>
+      <li>1 tbsp fresh ginger, grated (or 1 tsp dried) <span class="pantry-in">&#10003; in stock</span></li>
+      <li>1 tsp cumin <span class="pantry-in">&#10003; in stock</span></li>
+      <li>1 tsp smoked paprika <span class="pantry-in">&#10003; in stock</span></li>
+      <li>½ tsp turmeric <span class="pantry-in">&#10003; in stock</span></li>
+      <li>¼ tsp black pepper <span class="pantry-in">&#10003; in stock</span></li>
+      <li>Salt to taste <span class="pantry-in">&#10003; in stock</span></li>
+      <li>Juice of 1 lemon, to finish <span class="pantry-in">&#10003; in stock</span></li>
+    </ul>
+  </div>
+
+  <div class="recipe-box">
+    <p style="margin: 0 0 8px;"><strong>To finish</strong></p>
+    <ul>
+      <li>2 tbsp nutritional yeast <span class="pantry-in">&#10003; in stock</span></li>
+      <li>1 tsp za'atar, sprinkled over the top <span class="pantry-in">&#10003; in stock</span></li>
+      <li>1 tbsp sesame seeds, toasted <span class="pantry-in">&#10003; in stock</span></li>
+      <li>Large handful spinach or kale (optional - wilt in at the end) <span class="pantry-in">&#10003; in stock</span></li>
+    </ul>
+  </div>
+
+  <h2>Method</h2>
+
+  <h3>Step 1 - Roast the squash</h3>
+  <div class="recipe-box">
+    <ol>
+      <li>Preheat oven to 400&deg;F (200&deg;C).</li>
+      <li>Toss squash cubes with olive oil, a pinch of cumin, smoked paprika, and salt. Spread on a lined sheet pan in a single layer.</li>
+      <li>Roast 25-30 minutes until the edges are caramelized and the interior is tender when pierced. Do not stir - let the cut sides stay in contact with the pan.</li>
+      <li>Set aside. The squash goes into the pot in the last 5 minutes to warm through without losing its texture.</li>
+    </ol>
+  </div>
+
+  <h3>Step 2 - Build the broth</h3>
+  <div class="recipe-box">
+    <ol>
+      <li>Heat oil in a wide pan or Dutch oven over medium heat. Add diced red onion and cook 5-6 minutes until soft and starting to color at the edges.</li>
+      <li>Add grated ginger. Cook 1 minute - it should smell fragrant but not burn.</li>
+      <li>Add tomato paste and spread it across the bottom of the pan. Cook 2-3 minutes, stirring occasionally, until it darkens from bright red to a deeper brick color. This step concentrates the flavor and cooks out the raw paste taste.</li>
+      <li>Add cumin, smoked paprika, turmeric, and black pepper. Stir to coat everything. Cook 30 seconds.</li>
+      <li>Pour in coconut milk and water. Stir well to lift any stuck bits from the bottom. Bring to a gentle simmer.</li>
+    </ol>
+  </div>
+
+  <h3>Step 3 - Add beans and peas</h3>
+  <div class="recipe-box">
+    <ol>
+      <li>Add the drained beans. Simmer 10 minutes to let them absorb the broth flavor. Add a splash more water if the broth reduces too quickly - it should be thick but pourable.</li>
+      <li>Add green peas in the last 3 minutes. Frozen peas need only 2-3 minutes; fresh peas 4-5. Do not overcook - peas should stay bright green and slightly firm.</li>
+      <li>If adding spinach or kale, add it in the final 2 minutes and stir until wilted.</li>
+    </ol>
+  </div>
+
+  <h3>Step 4 - Finish and plate</h3>
+  <div class="recipe-box">
+    <ol>
+      <li>Add roasted squash to the pot and fold in gently. Simmer 2-3 minutes to warm through.</li>
+      <li>Squeeze lemon juice over the pot. Taste for salt.</li>
+      <li>Stir in nutritional yeast - it thickens the broth slightly and adds savory depth.</li>
+      <li>Ladle into bowls. Sprinkle za'atar and toasted sesame seeds immediately before serving.</li>
+    </ol>
+  </div>
+
+  <div class="tip">
+    <strong>Tomato paste technique.</strong> Cooking tomato paste directly in the oil before adding liquid is called "blooming" - the high heat drives off moisture and caramelizes the sugars, converting raw tomato bitterness into deep umami. The color change from bright red to brick is your signal. This same technique works for any concentrated tomato product and for spice pastes generally.
+  </div>
+
+  <h2>Variations</h2>
+
+  <div class="recipe-box">
+    <ul>
+      <li><strong>Add corn</strong> for the traditional Three Sisters combination. Fresh corn cut from the cob or frozen corn added with the peas. It adds sweetness and another texture layer.</li>
+      <li><strong>Chickpeas instead of black beans</strong> - when back in stock. Chickpeas hold their shape better in the broth and are a more traditional chaat base. Black beans give a richer, earthier color.</li>
+      <li><strong>Pumpkin seeds on top</strong> (when back in stock) - toasted, salty, and crunchy. A traditional finish for squash dishes in Indigenous American cooking and a strong zinc and iron source.</li>
+      <li><strong>Mango pickle chutney on the side</strong> - this is what makes it fully chaat-style. A small spoonful of mango chutney on the side or drizzled over the top adds the sweet-sour-fermented contrast that defines chaat as a category.</li>
+      <li><strong>Thicker consistency</strong> - simmer uncovered for 5 extra minutes, or mash a few spoonfuls of beans against the side of the pot to thicken the broth naturally.</li>
+      <li><strong>Over grains</strong> - serve over white rice, bulgur wheat, or wild rice for a fuller meal. The broth soaks into the grain well.</li>
+    </ul>
+  </div>
+
+  <h2>Nutritional Information</h2>
+  <p>Per serving (half recipe). Values are approximate; coconut milk fat varies significantly by brand.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="sortable">Component</th>
+        <th class="sortable">Cal</th>
+        <th class="sortable">Protein</th>
+        <th class="sortable">Fat</th>
+        <th class="sortable">Carbs</th>
+        <th class="sortable">Iron</th>
+        <th>Key nutrients</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://fdc.nal.usda.gov/food-details/168448/nutrients" target="_blank" rel="noopener">Butternut squash</a>, roasted (150g)</td>
+        <td>65</td>
+        <td>1.5g</td>
+        <td>0.1g</td>
+        <td>17g</td>
+        <td>0.8mg</td>
+        <td>Beta-carotene (vitamin A, ~457% DV/100g cooked), vitamin C, potassium, fiber</td>
+      </tr>
+      <tr>
+        <td><a href="https://fdc.nal.usda.gov/food-details/175237/nutrients" target="_blank" rel="noopener">Black beans</a>, cooked (150g)</td>
+        <td>198</td>
+        <td>13.4g</td>
+        <td>0.8g</td>
+        <td>36g</td>
+        <td>3.3mg</td>
+        <td>Folate (36% DV), fiber (11g), potassium, magnesium, complete protein when paired with squash</td>
+      </tr>
+      <tr>
+        <td><a href="https://fdc.nal.usda.gov/food-details/170419/nutrients" target="_blank" rel="noopener">Green peas</a> (60g)</td>
+        <td>49</td>
+        <td>3.3g</td>
+        <td>0.2g</td>
+        <td>8.7g</td>
+        <td>0.8mg</td>
+        <td>Vitamin C (30% DV/100g), vitamin K, folate, thiamine</td>
+      </tr>
+      <tr>
+        <td><a href="https://fdc.nal.usda.gov/food-details/168565/nutrients" target="_blank" rel="noopener">Coconut milk</a>, full-fat (100ml)</td>
+        <td>197</td>
+        <td>2g</td>
+        <td>21g</td>
+        <td>3g</td>
+        <td>0.2mg</td>
+        <td>Lauric acid (saturated, ~13g/100ml); manganese, selenium</td>
+      </tr>
+      <tr>
+        <td>Tomato paste (1 tbsp, ~15g)</td>
+        <td>13</td>
+        <td>0.7g</td>
+        <td>0.1g</td>
+        <td>3g</td>
+        <td>0.6mg</td>
+        <td>Lycopene (highly bioavailable - cooked with fat), vitamin C, potassium</td>
+      </tr>
+      <tr>
+        <td><a href="https://fdc.nal.usda.gov/food-details/790577/nutrients" target="_blank" rel="noopener">Red onion</a> (50g)</td>
+        <td>20</td>
+        <td>0.5g</td>
+        <td>0g</td>
+        <td>4.7g</td>
+        <td>0.1mg</td>
+        <td>Quercetin, anthocyanins</td>
+      </tr>
+      <tr>
+        <td>Spices (cumin, paprika, turmeric, ginger)</td>
+        <td>~12</td>
+        <td>0.5g</td>
+        <td>0.3g</td>
+        <td>2g</td>
+        <td>0.5mg</td>
+        <td>Curcumin (turmeric, bioavailability enhanced by black pepper), gingerols, capsaicin</td>
+      </tr>
+      <tr>
+        <td><a href="https://fdc.nal.usda.gov/food-details/2421410/nutrients" target="_blank" rel="noopener">Nutritional yeast</a> (1 tbsp)</td>
+        <td>22</td>
+        <td>4g</td>
+        <td>0.5g</td>
+        <td>2.5g</td>
+        <td>0.5mg</td>
+        <td>B12 (~167% DV if fortified), zinc, complete protein</td>
+      </tr>
+      <tr>
+        <td>Olive oil (1 tsp roasting + 1 tsp pan)</td>
+        <td>80</td>
+        <td>0g</td>
+        <td>9g</td>
+        <td>0g</td>
+        <td>0mg</td>
+        <td>Oleic acid (monounsaturated), vitamin E, polyphenols; also carries fat-soluble nutrients from squash and tomato</td>
+      </tr>
+      <tr>
+        <td><a href="https://fdc.nal.usda.gov/food-details/170150/nutrients" target="_blank" rel="noopener">Sesame seeds</a>, toasted (½ tsp)</td>
+        <td>5</td>
+        <td>0.2g</td>
+        <td>0.4g</td>
+        <td>0.2g</td>
+        <td>0.1mg</td>
+        <td>Calcium, zinc; sesamol antioxidant</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Per serving</td>
+        <td>~661 kcal</td>
+        <td>~26g</td>
+        <td>~32g</td>
+        <td>~77g</td>
+        <td>~6.9mg</td>
+        <td>~250-400mg sodium (before seasoning); ~15g fiber</td>
+      </tr>
+      <tr>
+        <td>% daily value*</td>
+        <td>33%</td>
+        <td>52%</td>
+        <td>41%</td>
+        <td>28%</td>
+        <td>38%</td>
+        <td>*2000 kcal diet; iron 18mg DV, protein 50g DV, fat 78g DV, carbs 275g DV</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div class="nutrition-box">
+    <strong>Nutritional highlights</strong>
+    <p><strong>Strengths:</strong> This is one of the highest-iron meals in the collection at ~6.9mg per serving (38% DV). Black beans alone contribute 3.3mg - nearly as much as the entire paneer bowl. The tomato paste and lemon juice both provide vitamin C in the same dish, actively improving non-heme iron absorption. No dairy in this recipe means no calcium inhibiting that uptake - iron absorption conditions here are better than most other meals. Butternut squash is an exceptional source of beta-carotene (~457% DV vitamin A per 100g cooked). Very high fiber (~15g per serving) from beans + peas + squash supports gut health and slows the glucose response from the carbohydrate load. Folate from black beans (36% DV per 150g) directly addresses the key gap in vegetarian diets. Nutritional yeast adds B12 and complete protein. Turmeric with black pepper activates curcumin absorption - the black pepper compound piperine increases curcumin bioavailability by approximately 2000%.</p>
+    <p><strong>Watch points:</strong> Coconut milk is the main nutritional trade-off - 100ml provides ~13g saturated fat (largely lauric acid, which has a better metabolic profile than long-chain saturated fats but still raises LDL in some individuals). If eating this alongside the paneer bowl in the same week, monitor total saturated fat from both dishes. Protein at ~26g per serving is solid but lower than the paneer bowl - add chickpeas instead of black beans when back in stock (slightly higher protein), or add a side of nutritional yeast or lentils to boost. The carbohydrate load (~77g) is high - appropriate and fueling for an active day with cycling, but a large meal for an inactive evening. No significant omega-3 source in this dish; the morning smoothie covers this.</p>
+  </div>
+
+  <div class="tip">
+    <strong>Curcumin and piperine.</strong> Turmeric's active compound (curcumin) is poorly absorbed on its own. Black pepper's piperine inhibits the enzyme that breaks curcumin down before it can be absorbed, increasing bioavailability by roughly 20x at a dose as small as 1/4 tsp black pepper. This recipe includes both. The fat from coconut milk and olive oil further improves absorption since curcumin is fat-soluble.
+  </div>
+
+  <div class="tip">
+    <strong>Iron without inhibitors.</strong> This is the cleanest iron meal in the collection. No dairy (no calcium inhibition), no tannins (no tea or matcha), tomato paste + lemon juice provide vitamin C in the pot itself. The beans are the primary iron source (~3.3mg per serving) and the conditions here give non-heme iron its best shot at absorption. Eat an hour before or after any tea.
+  </div>
+
+  <div class="tip">
+    <strong>The Three Sisters tradition.</strong> The Three Sisters planting system - corn, beans, and squash - was developed by Indigenous peoples of the eastern and southwestern United States and Canada over thousands of years. Corn provides height; beans climb the corn and fix atmospheric nitrogen into the soil; squash shades the ground, retaining moisture and suppressing weeds. Together they form a nutritionally complete diet: the corn provides carbohydrate, beans provide protein and lysine (an amino acid low in corn), and squash provides vitamins. This recipe adapts the tradition by substituting green peas for corn - peas are a legume like beans and provide more protein and folate, while losing the starch base that corn contributes. Serve over rice or bulgur to restore that balance.
+  </div>
+
+  <script>
+    document.querySelectorAll('th.sortable').forEach(th => {
+      th.addEventListener('click', () => {
+        const table = th.closest('table');
+        const tbody = table.querySelector('tbody');
+        const col = Array.from(th.parentElement.children).indexOf(th);
+        let asc = th.dataset.asc !== 'true';
+        th.dataset.asc = asc;
+        table.querySelectorAll('th.sortable').forEach(h => { h.className = 'sortable'; delete h.dataset.asc; });
+        th.className = 'sortable ' + (asc ? 'sort-asc' : 'sort-desc');
+        th.dataset.asc = asc;
+        Array.from(tbody.querySelectorAll('tr')).sort((a, b) => {
+          const va = parseFloat(a.cells[col].textContent.replace(/[^\d.]/g, '')) || 0;
+          const vb = parseFloat(b.cells[col].textContent.replace(/[^\d.]/g, '')) || 0;
+          return asc ? va - vb : vb - va;
+        }).forEach(r => tbody.appendChild(r));
+      });
+    });
+  </script>
+</body>
+</html>
