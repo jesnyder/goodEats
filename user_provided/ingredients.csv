@@ -1,8 +1,5 @@
 Items (if an "N - " begins the line, the item is not in stock) 
 
-Beans - Black, can 
-Beans - Pinto, cooked 
-
 Carbohydrate - Barley
 Carbohydrate - Bulgar wheat
 Carbohydrate - Noodle 
@@ -10,7 +7,7 @@ Carbohydrate - Quinoa
 Carbohydrate - Rice, Arborio
 Carbohydrate - Rice, Mexican style 
 Carbohydrate - Rice, White
-Carbohydrate - Rice, Wild Rice 
+Carbohydrate - Rice, Minnesota Cultivated Wild Rice
 
 Dairy - Feta cheese 
 Dairy - Ghee
@@ -31,7 +28,7 @@ Produce - Bannana
 Produce - Beets
 Produce - Brussel Sprouts 
 Produce - Celery 
-Produce - Cucumber 
+N - Produce - Cucumber 
 Produce - Eggs
 Produce - Ginger
 Produce - Ginger, dried
@@ -43,7 +40,10 @@ Produce - Spinach
 Produce - Sweet potato
 
 Protein - Beans 
+Protein - Black, can 
 Protein - Lentils
+Protein - Pinto, cooked 
+Protein - Whey protein powder, 60 g protein / 1 scoop (44 g) 
 
 N - Sauce - Almond butter
 Sauce - Coconut oil
