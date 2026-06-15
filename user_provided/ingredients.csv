@@ -2,13 +2,16 @@ Items (if an "N - " begins the line, the item is not in stock)
 
 Carbohydrate - Barley
 Carbohydrate - Bulgar wheat
+Carbohydrate - Granola 
 Carbohydrate - Noodle 
+Carbohydrate - Oats, Rolled or Steel Cut 
 Carbohydrate - Quinoa
 Carbohydrate - Rice, Arborio
 Carbohydrate - Rice, Mexican style 
 Carbohydrate - Rice, White
 Carbohydrate - Rice, Minnesota Cultivated Wild Rice
 
+N - Dairy - Chocolate chips
 Dairy - Feta cheese 
 Dairy - Ghee
 Dairy - Keifer 
@@ -20,12 +23,18 @@ Fermented - Kimchi
 Fermented - Mango pickle chutney 
 Fermented - Miso paste  
 Fermented - Pickles 
+N - Fermented - Sauerkraut 
 Fermented - Vinegar, Apple cider 
 Fermented - Vinegar, Plum
 Fermented - Vinegar, White
 
+N - Produce - Apple, Green 
+N - Produce - Avocado 
 Produce - Bannana 
-Produce - Beets
+Produce - Beet root (only root part, no greens) 
+N - Produce - Berries, Blackberries 
+N - Produce - Berries, Blueberries 
+N - Produce - Berries, Raspberries
 Produce - Brussel Sprouts 
 N - Produce - Carrot 
 Produce - Celery 
@@ -46,6 +55,7 @@ N - Produce - Squash, Acorn
 N - Produce - Squash, Butternut 
 N - Produce - Squash, Spaghetti
 Produce - Sweet potato
+N - Produce - Tomato 
 
 Protein - Beans 
 Protein - Beans, Black 
@@ -54,19 +64,22 @@ N - Protein - Beans, Great northern
 N - Protein - Beans, Pinto
 N - Protein - Beans, Red
 N - Protein - Beans, Runner beans
+Protein - Hummus, powder 
 Protein - Lentils
-N - Protein - Almond, slices
-N - Protein - Cashews
-N - Protein - Mixed
-N - Protein - Peanuts, in the shell
-N - Protein - Pistachios 
-N - Protein - Walnuts
+N - Protein - Nuts, Almond, slices
+N - Protein - Nuts, Cashews
+N - Protein - Nuts, Mixed
+N - Protein - Nuts,  Peanuts, in the shell
+N - Protein - Nuts, Pine
+N - Protein - Nuts, Pistachios 
+N - Protein - Nuts, Walnuts
 Protein - Pinto, cooked 
 Protein - Whey protein powder, 60 g protein / 1 scoop (44 g) 
 
 N - Sauce - Almond butter
 Sauce - Coconut oil
 Sauce - Ginger syrup
+N - Sauce - Maple syrup 
 Sauce - Pesto
 N - Sauce - Peanut butter 
 Sauce - Seasame oil
