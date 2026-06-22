@@ -39,6 +39,7 @@ N - Mushroom - Turkey tail, powder
 
 
 N - Produce - Apple, Green 
+Produce - Asparagus
 N - Produce - Avocado 
 Produce - Bannana 
 Produce - Beet root (only root part, no greens) 
@@ -49,14 +50,14 @@ Produce - Brussel Sprouts
 N - Produce - Carrot 
 Produce - Celery 
 N - Produce - Corn, Frozen
-N - Produce - Cucumber 
+Produce - Cucumber 
 N - Produce - Dates
 Produce - Eggs
 N - Produce - Garlic, bulb 
 N - Produce - Ginger
 Produce - Ginger, dried
 Produce - Kale 
-Produce - Leeks 
+N - Produce - Leeks 
 Produce - Lemon juice
 Produce - Onion, red
 Produce - Onion, yellow
@@ -64,6 +65,7 @@ N - Produce - Peas, green, Frozen
 N - Produce - Pepper, Bell
 N - Produce - Pepper, Jalapeno
 N - Produce - Pepper, Serrano
+Produce - Pineapple, canned juice
 N - Produce - Raisins
 Produce - Spinach 
 N - Produce - Squash, Acorn 

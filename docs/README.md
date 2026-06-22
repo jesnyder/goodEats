@@ -18,6 +18,11 @@ goodEats/
 │   ├── cucumber-salad.html          # Cold Asian smashed-cucumber salad with Szechuan peppercorn oil option; pairs with mushroom rice
 │   ├── morning-smoothie.html        # Daily 1L smoothie — ingredients (incl. rose hips powder), method, per-ingredient nutrition, iron gap warning, B12/D notes
 │   ├── mushroom-rice.html           # Maitake mushroom rice (Instant Pot); UV-B ergosterol → vitamin D2; serves as side to cucumber salad
+│   ├── french-lentil-soup.html      # Miso leek and French lentil soup; Instant Pot + stovetop methods; layered/blended technique; highest iron in collection (~10.6mg/serving, 59% DV)
+│   ├── paneer-bowl.html             # Labneh & miso paneer bowl with roasted vegetables; ~36g protein/serving
+│   ├── three-sisters.html           # Butternut squash, black beans, green peas in spiced tomato-coconut broth; ~6.9mg iron/serving
+│   ├── beet-kale-salad.html         # Roasted beet and kale salad with feta, lemon-ACV dressing, za'atar; light side dish
+│   ├── beet-leek-miso-sauce.html    # Roasted beet and leek miso cream sauce for ravioli; silky magenta pasta sauce
 │   ├── ingredients.html             # Pantry reference table — all ingredients with USDA FDC hyperlinks, nutritional info, culinary role, stock status; filterable and sortable
 │   ├── nutritional-guide.html       # Peer-reviewed guide to balanced diet and fasting — cited research with DOI links, sortable nutrient-by-function reference table
 │   └── about.html                   # Site philosophy, dietary approach (vegetarian, no seafood, low iron, cycling commuter), kitchen setup, evidence standards
@@ -73,3 +78,15 @@ Always check `user_provided/dietary_restrictions.csv` before writing recipes or 
 12. **Link evidence claims to credible sources.** The user is a scientist and values cause-and-effect reasoning. When stating that a cooking technique or ingredient has a specific effect (nutritional, biochemical, culinary), link to a credible primary or institutional source (USDA, NIH, peer-reviewed journal, university extension). Do not state uncertain claims as facts. State confidence level and note unknowns explicitly.
 
 13. **Labneh cooking behavior.** Labneh is a soft strained-yogurt cheese with high moisture content. It does **not** char at high heat. At high heat, the coating may brown gently, but a crisp crust does not form from labneh itself. Any charring in a labneh-marinated dish comes from the protein underneath (paneer, tofu). Cook labneh-coated dishes on medium-high heat, not maximum heat. Do not describe labneh as "charring well" anywhere in the site.
+
+14. **Miso, kefir, and bromelain temperature threshold: below 70°C.** Miso probiotic cultures die above 70°C; kefir cultures are similarly heat-sensitive; bromelain (pineapple enzyme) denatures above ~60–70°C. Always add these ingredients off heat or on Instant Pot warming mode. Never return the pot to a boil after adding them. Dissolve miso in a ladleful of broth first to incorporate evenly.
+
+15. **Instant Pot warming mode for combining heat-sensitive soups.** Warming mode holds ~60–80°C — warm enough to meld flavors and wilt greens, low enough to preserve miso, kefir, bromelain, and vitamin C. For soups with fermented or enzyme-active finishing ingredients, combine everything on warming mode rather than sautéing after the pressure cycle.
+
+16. **Instant Pot layered lentil technique.** Cooking lentils plain in water (High Pressure 8 min, natural release 10 min) then blending ⅔ of the cooked lentils produces a naturally creamy, thickened base without added fat. The remaining ⅓ whole lentils provide texture. Building the spiced broth separately gives independent control over heat level before combining. Nutritionally, blending lentils is neutral — protein, iron, and fiber are unchanged. This technique is documented in `french-lentil-soup.html`.
+
+17. **Maitake mushrooms in soup: sauté first.** Soup broth never exceeds 100°C, which is not hot enough for Maillard browning. Maitake must be sautéed separately in a dry or lightly oiled pan at high heat — let them release their water, allow it to evaporate, then let edges brown — before adding to soup. For Instant Pot use, add with the lentils (pressure heat is sufficient). Do not add maitake raw to a simmering soup broth if flavor development is the goal.
+
+18. **Leek iron — USDA dataset discrepancy.** USDA SR Legacy (FDC 169246) reports 2.1mg iron per 100g raw leeks; USDA Foundation (FDC 2727584) reports 0.761mg per 100g. This is a significant discrepancy. Current recipe pages use the SR Legacy value. State this uncertainty when iron content from leeks is cited. Even using the Foundation value, the lentil soup remains the highest-iron recipe in this collection.
+
+19. **Nutritional yeast USDA link.** No Foundation or SR Legacy entry exists for nutritional yeast. The recipe page links to a Branded entry (FDC 2421410). Nutritional values from Branded entries may vary by manufacturer. When citing nutritional yeast nutrition, note this limitation.
